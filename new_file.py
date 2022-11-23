@@ -95,12 +95,18 @@
 
 #3.5 задача №2
 from datetime import date, time, datetime, timedelta
-date1 = date(2022, 10, 15)
-date2 = date(1999, 12, 26)
-
-print(date1.weekday())
-print(date2.weekday())
 
 
 
+#3.5 задача № 3
+
+
+a = input()
+date = datetime.strptime(a, "%d.%m.%Y %H:%M")
+
+if date.isoweekday() > 5:
+    t = date.time()
+    if t >= time(10, 0) and t <= time(18, 0):
+        res = time(18, 0) - t
+print(t)
 

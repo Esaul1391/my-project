@@ -101,12 +101,22 @@ from datetime import date, time, datetime, timedelta
 #3.5 задача № 3
 
 
-a = input()
-date = datetime.strptime(a, "%d.%m.%Y %H:%M")
+# a = input()
+# date = datetime.strptime(a, "%d.%m.%Y %H:%M")
+#
+# if date.isoweekday() > 5:
+#     t = date.time()
+#     if t >= time(10, 0) and t <= time(18, 0):
+#         res = date  - timedelta()
+#         print(res)
 
-if date.isoweekday() > 5:
-    t = date.time()
-    if t >= time(10, 0) and t <= time(18, 0):
-        res = time(18, 0) - t
-print(t)
+#3.4 задача №4
+date1 = datetime.strptime(input(), "%d.%m.%Y")
+date2 = datetime.strptime(input(), "%d.%m.%Y")
+sp = []
+for i in range(date1.toordinal(), date2.toordinal() + 1):
+    a = datetime.fromordinal(i)
+    count = 0
 
+    if sp = 0 and (a.month + a.day) % 2 != 0:
+        print(a)

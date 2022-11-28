@@ -111,12 +111,26 @@ from datetime import date, time, datetime, timedelta
 #         print(res)
 
 #3.4 задача №4
-date1 = datetime.strptime(input(), "%d.%m.%Y")
-date2 = datetime.strptime(input(), "%d.%m.%Y")
-sp = []
-for i in range(date1.toordinal(), date2.toordinal() + 1):
-    a = datetime.fromordinal(i)
-    count = 0
+# date1 = datetime.strptime(input(), "%d.%m.%Y")
+# date2 = datetime.strptime(input(), "%d.%m.%Y")
+# sp = []
+# for i in range(date1.toordinal(), date2.toordinal() + 1):
+#     a = datetime.fromordinal(i)
+#     count = 0
+#
+#     if sp = 0 and (a.month + a.day) % 2 != 0:
+#         print(a)
 
-    if sp = 0 and (a.month + a.day) % 2 != 0:
-        print(a)
+
+# 3.7 задачи
+
+# import calendar
+# for i in range(int(input())):
+#     print(calendar.isleap(int(input())))
+
+
+import calendar
+
+m = list(calendar.month_abbr)
+d = input().split()
+print(calendar.month(int(d[0]), m.index(d[1])))

@@ -162,16 +162,17 @@ from datetime import date, time, datetime, timedelta
 from datetime import date, datetime, timedelta
 import calendar
 def get_all_mondays(year):
-    v = calendar.isleap(year)
-    if v == True:
-        d = 366
-    else:
-        d = 365
+
     sp = []
-    for i in range(d):
+    for i in range(1, 12):
+        v = calendar.monthrange(year, i)
+        for k in range(1, v[1] + 1):
+            d = date(year, i, k)
+            if d.isoweekday() == 1:
+                sp.append(d)
 
 
 
-    return y
+    return sp
 
-print(get_all_mondays(1991))
+print(get_all_mondays(2021))

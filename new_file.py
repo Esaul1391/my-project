@@ -129,8 +129,49 @@ from datetime import date, time, datetime, timedelta
 #     print(calendar.isleap(int(input())))
 
 
-import calendar
+# import calendar
+#
+# m = list(calendar.month_abbr)
+# d = input().split()
+# print(calendar.month(int(d[0]), m.index(d[1])))
 
-m = list(calendar.month_abbr)
-d = input().split()
-print(calendar.month(int(d[0]), m.index(d[1])))
+
+# import calendar
+#
+# y, m = input().split()
+#
+# names = list(calendar.month_name)
+#
+# mon = calendar.monthrange(int(y), names.index(m))
+# print(mon[1])
+
+# from datetime import date, datetime
+# import calendar
+# def get_days_in_month(year, month):
+#     names = list(calendar.month_name)
+#     sp = []
+#     mon = calendar.monthrange(int(year), names.index(month))
+#     for i in range(1, mon[1] + 1):
+#         d = date(year, names.index(month), i)
+#         sp.append(d)
+#     return sp
+#
+# print(get_days_in_month(1991, 'December'))
+
+
+from datetime import date, datetime, timedelta
+import calendar
+def get_all_mondays(year):
+    v = calendar.isleap(year)
+    if v == True:
+        d = 366
+    else:
+        d = 365
+    sp = []
+    for i in range(d):
+
+
+
+    return y
+
+print(get_all_mondays(1991))

@@ -111,68 +111,12 @@ from datetime import date, time, datetime, timedelta
 #         print(res)
 
 #3.4 задача №4
-# date1 = datetime.strptime(input(), "%d.%m.%Y")
-# date2 = datetime.strptime(input(), "%d.%m.%Y")
-# sp = []
-# for i in range(date1.toordinal(), date2.toordinal() + 1):
-#     a = datetime.fromordinal(i)
-#     count = 0
-#
-#     if sp = 0 and (a.month + a.day) % 2 != 0:
-#         print(a)
+date1 = datetime.strptime(input(), "%d.%m.%Y")
+date2 = datetime.strptime(input(), "%d.%m.%Y")
+sp = []
+for i in range(date1.toordinal(), date2.toordinal() + 1):
+    a = datetime.fromordinal(i)
+    count = 0
 
-
-# 3.7 задачи
-
-# import calendar
-# for i in range(int(input())):
-#     print(calendar.isleap(int(input())))
-
-
-# import calendar
-#
-# m = list(calendar.month_abbr)
-# d = input().split()
-# print(calendar.month(int(d[0]), m.index(d[1])))
-
-
-# import calendar
-#
-# y, m = input().split()
-#
-# names = list(calendar.month_name)
-#
-# mon = calendar.monthrange(int(y), names.index(m))
-# print(mon[1])
-
-# from datetime import date, datetime
-# import calendar
-# def get_days_in_month(year, month):
-#     names = list(calendar.month_name)
-#     sp = []
-#     mon = calendar.monthrange(int(year), names.index(month))
-#     for i in range(1, mon[1] + 1):
-#         d = date(year, names.index(month), i)
-#         sp.append(d)
-#     return sp
-#
-# print(get_days_in_month(1991, 'December'))
-
-
-from datetime import date, datetime, timedelta
-import calendar
-def get_all_mondays(year):
-
-    sp = []
-    for i in range(1, 12):
-        v = calendar.monthrange(year, i)
-        for k in range(1, v[1] + 1):
-            d = date(year, i, k)
-            if d.isoweekday() == 1:
-                sp.append(d)
-
-
-
-    return sp
-
-print(get_all_mondays(2021))
+    if sp = 0 and (a.month + a.day) % 2 != 0:
+        print(a)

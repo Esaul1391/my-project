@@ -36,14 +36,27 @@
 
 # Задача 3
 
+# import sys
+#
+# soks = list(map(str.strip, sys.stdin))
+# last = soks[-1]
+#
+# if int(last) % 2 == 0 and len(soks) % 2 == 1:
+#     print("Арни")
+# if int(last) % 2 == 0 and len(soks) % 2 == 0:
+#     print("Дима")
+#
+
+# Задача 4
+
 import sys
 
-soks = list(map(str.strip, sys.stdin))
-last = soks[-1]
-
-if int(last) % 2 == 0 and len(soks) % 2 == 1:
-    print("Арни")
-if int(last) % 2 == 0 and len(soks) % 2 == 0:
-    print("Дима")
-
+h = list(map(str.strip, sys.stdin))
+heigh = [int(i) for i in h]
+if len(heigh) > 0:
+    print(f"Рост самого низкого ученика: {min(heigh)}")
+    print(f"Рост самого высокого ученика: {max(heigh)}")
+    print(f"Средний рост: {sum(heigh)/len(heigh)}")
+else:
+    print("нет учеников")
 

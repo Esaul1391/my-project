@@ -49,14 +49,51 @@
 
 # Задача 4
 
+# import sys
+#
+# h = list(map(str.strip, sys.stdin))
+# heigh = [int(i) for i in h]
+# if len(heigh) > 0:
+#     print(f"Рост самого низкого ученика: {min(heigh)}")
+#     print(f"Рост самого высокого ученика: {max(heigh)}")
+#     print(f"Средний рост: {sum(heigh)/len(heigh)}")
+# else:
+#     print("нет учеников")
+
+
+
+# Задача 5
+
+# import sys
+# cod = list(map(str.strip, sys.stdin))
+# count_com = 0
+# for i in cod:
+#     if i[0] == "#":
+#         count_com +=1
+# print(count_com)
+
+
+# Задача 6
+
+# import sys
+# for line in sys.stdin:
+#     if (line.lstrip(' ')[0] != '#'):
+#         print(line.rstrip('\n'))#
+
+
+# Задача 7
+
 import sys
 
-h = list(map(str.strip, sys.stdin))
-heigh = [int(i) for i in h]
-if len(heigh) > 0:
-    print(f"Рост самого низкого ученика: {min(heigh)}")
-    print(f"Рост самого высокого ученика: {max(heigh)}")
-    print(f"Средний рост: {sum(heigh)/len(heigh)}")
-else:
-    print("нет учеников")
+news = [i.split('/ ') for i in list(map(str.strip, sys.stdin))]
+cat = str(*news[-1])
+news = news[: -1]
+sp = []
+print(cat)
+for i in news:
 
+    if str(i[1]) != cat:
+        print(i[1])
+        sp.append(i)
+sp = sorted(sp, key=lambda x: x[2])
+print(sp)

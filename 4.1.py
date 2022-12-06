@@ -83,17 +83,38 @@
 
 # Задача 7
 
+# import sys
+#
+# news = [i.split('/ ') for i in list(map(str.strip, sys.stdin))]
+# cat = str(*news[-1])
+# news = news[: -1]
+# sp = []
+# print(cat)
+# for i in news:
+#
+#     if str(i[1]) != cat:
+#         print(i[1])
+#         sp.append(i)
+# sp = sorted(sp, key=lambda x: x[2])
+# print(sp)
+
+
+# Задача 8
+
+
+from datetime import datetime, timedelta
 import sys
 
-news = [i.split('/ ') for i in list(map(str.strip, sys.stdin))]
-cat = str(*news[-1])
-news = news[: -1]
-sp = []
-print(cat)
-for i in news:
 
-    if str(i[1]) != cat:
-        print(i[1])
-        sp.append(i)
-sp = sorted(sp, key=lambda x: x[2])
-print(sp)
+data = list(map(str.strip, sys.stdin))
+data = [datetime.strptime(i, '%d.%m.%Y') for i in data]
+data2 = set(data)
+if data == sorted(data) and len(data) == len(data2):
+    print("ASC")
+elif data == sorted(data, reverse= True) and len(data) == len(data2):
+    print("DESC")
+else:
+    print("MIX")
+print(data2)
+
+

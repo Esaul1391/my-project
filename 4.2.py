@@ -1,7 +1,8 @@
 # Задача №3
+
 import csv
 
-with open('sales.csv', 'r', encoding='utf-8') as file:
+with open('sales.csv', encoding='utf-8') as file:
     data = file.read()
     table = [r.split(',') for r in data.splitlines()]
     del table[0]                                        # удаляем заголовок
